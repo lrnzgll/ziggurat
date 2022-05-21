@@ -1,8 +1,7 @@
 <template>
-  <p>HomePage</p>
+  <p>History</p>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
