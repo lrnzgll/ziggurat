@@ -16,6 +16,11 @@ export default {
     Button,
     Tabs,
   },
+  data() {
+    return {
+      userEmail: '',
+    };
+  },
   computed: {
     isAuthenticated() {
       return this.$auth0.isAuthenticated.value;

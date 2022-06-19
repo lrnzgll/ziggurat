@@ -2,17 +2,17 @@
   <div>
     <h2>User Profile</h2>
     <pre>
-      <code>{{ user }}</code>
+      <code>{{ currentUser }}</code>
     </pre>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    user() {
-      return this.$auth0.user;
-    },
+  data() {
+    return {
+      currentUser: this.$auth0.user,
+    };
   },
 };
 </script>
