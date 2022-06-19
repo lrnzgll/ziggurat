@@ -28,7 +28,7 @@ export default {
   },
   watch: {
     token() {
-      this.http.get('http://localhost:3000/expressions.json')
+      this.http.get('/expressions.json')
         .then((response) => {
           this.expressions = response.data.expressions;
         });

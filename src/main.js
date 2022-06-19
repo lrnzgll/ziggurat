@@ -23,6 +23,11 @@ app.use(
 app.use(createPinia());
 
 app.use(router);
-app.config.globalProperties.http = axios;
+
+const http = axios.create({
+  baseURL: process.env.VUE_APP_API_BASE_URL,
+});
+
+app.config.globalProperties.http = http;
 app.config.globalProperties.gsap = gsap;
 app.mount('#app');
