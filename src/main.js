@@ -11,10 +11,10 @@ const app = createApp(App);
 
 app.use(
   createAuth0({
-    domain: 'dev-mgquruj8.eu.auth0.com',
-    client_id: '8ciJAyaabpHt4LLPFEhndMfnA2rq3Ll3',
+    domain: process.env.VUE_APP_DOMAIN,
+    client_id: process.env.VUE_APP_CLIENT_ID,
     redirect_uri: window.location.origin,
-    audience: 'http://localhost:3000',
+    audience: process.env.VUE_APP_AUDIENCE,
     useRefreshTokens: true,
     cacheLocation: 'localstorage',
   }),
