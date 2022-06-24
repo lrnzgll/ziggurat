@@ -1,19 +1,19 @@
 <template>
   <menu class='flex items-center justify-items-center h-10 p-2 justify-center bg-sky-500 rounded-md self-center'>
     <button @click='settings' class='px-3'>
-      <font-awesome-icon :icon="[settingsIconStyle, 'list-alt']" :style="{ color: 'white' }" size='xl' />
+      <font-awesome-icon :icon="[settingsIconStyle, 'list-alt']" :style="{ color: 'white' }" size='lg' />
     </button>
     <button @click='history' class='px-3'>
-      <font-awesome-icon :icon="[historyIconStyle, 'clock']" :style="{ color: 'white' }" size='xl' />
+      <font-awesome-icon :icon="[historyIconStyle, 'clock']" :style="{ color: 'white' }" size='lg' />
     </button>
     <button @click='home' class='px-3'>
-      <font-awesome-icon :icon="[houseIconStyle, 'lightbulb']" :style="{ color: 'white' }" size='xl' />
+      <font-awesome-icon :icon="[houseIconStyle, 'lightbulb']" :style="{ color: 'white' }" size='lg' />
     </button>
     <button @click='notifications' class='px-3'>
-      <font-awesome-icon :icon="[notificationsStyle, 'bell']" :style="{ color: 'white' }" size='xl' />
+      <font-awesome-icon :icon="[notificationsStyle, 'bell']" :style="{ color: 'white' }" size='lg' />
     </button>
     <button @click='account' class='px-3'>
-      <font-awesome-icon :icon="[accountIconStyle, 'user']" :style="{ color: 'white' }" size='xl' />
+      <font-awesome-icon :icon="[accountIconStyle, 'user']" :style="{ color: 'white' }" size='lg' />
     </button>
    </menu>
 </template>
