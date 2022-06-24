@@ -1,5 +1,5 @@
 <template>
-  <div v-show='loaded' class='container mx-auto my-4'>
+  <div v-show='loaded' class='font-ubuntu container mx-auto my-4'>
     <NavBar />
     <router-view/>
   </div>
@@ -19,3 +19,10 @@ export default {
   },
 };
 </script>
+
+<style>
+  @font-face {
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/Ubuntu-Regular.ttf");
+}
+</style>
