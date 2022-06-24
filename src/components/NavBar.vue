@@ -1,6 +1,6 @@
 <template>
   <div class='flex justify-between'>
-    <img src="https://res.cloudinary.com/lrnzgll/image/upload/c_thumb,g_north,q_80,r_30,w_100/v1652626143/Ziggurat_uqclx0.jpg" alt=""/>
+    <img src="https://res.cloudinary.com/lrnzgll/image/upload/c_scale,w_100/v1656093502/Ziggurat_ucx2cb.png" alt=""/>
     <Tabs v-if='isAuthenticated' />
     <Button v-if='!isAuthenticated' text='login' @click='login' class='self-center'/>
     <Button v-else text='logout' @click='logout' class='self-center'/>
