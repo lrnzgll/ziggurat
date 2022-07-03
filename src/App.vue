@@ -1,5 +1,5 @@
 <template>
-  <div v-show='loaded' class='font-ubuntu container mx-auto my-4'>
+  <div v-show='loaded' class='font-ubuntu mb-4'>
     <NavBar />
     <router-view/>
   </div>

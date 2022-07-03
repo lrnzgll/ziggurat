@@ -1,5 +1,11 @@
 @tailwind base;
 
+@layer base {
+  h4 {
+    @apply text-xl;
+  }
+}
+
 @tailwind components;
 
 @tailwind utilities;

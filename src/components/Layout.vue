@@ -1,5 +1,5 @@
 <template>
-  <section class='my-5' :class='colStyle'>
+  <section class='px-5' :class='colStyle'>
     <slot />
   </section>
 </template>
