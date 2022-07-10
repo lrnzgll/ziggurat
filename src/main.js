@@ -3,11 +3,11 @@ import { createAuth0 } from '@auth0/auth0-vue';
 import axios from 'axios';
 import { gsap } from 'gsap';
 import './assets/tailwind.css';
-import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
+import store from './store';
 
-const app = createApp(App);
+const app = createApp(App).use(store);
 
 app.use(
   createAuth0({
@@ -19,15 +19,13 @@ app.use(
     cacheLocation: 'localstorage',
   }),
 );
-
-app.use(createPinia());
-
+app.use(store);
 app.use(router);
 
 const http = axios.create({
   baseURL: process.env.VUE_APP_API_BASE_URL,
 });
 
-app.config.globalProperties.http = http;
+app.config.globalProperties.$http = http;
 app.config.globalProperties.gsap = gsap;
 app.mount('#app');

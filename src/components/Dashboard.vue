@@ -29,7 +29,7 @@ export default {
   methods: {
     async setToken() {
       this.token = await this.$auth0.getAccessTokenSilently();
-      this.http.defaults.headers.Authorization = this.token;
+      this.$http.defaults.headers.Authorization = this.token;
     },
   },
   computed: {
@@ -45,7 +45,7 @@ export default {
   },
   watch: {
     token() {
-      this.http.get('/expressions.json')
+      this.$http.get('/expressions.json')
         .then((response) => {
           this.expressions = response.data.expressions;
         });
