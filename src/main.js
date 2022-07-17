@@ -7,7 +7,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-const app = createApp(App).use(store);
+const app = createApp(App);
 
 app.use(
   createAuth0({
@@ -19,7 +19,6 @@ app.use(
     cacheLocation: 'localstorage',
   }),
 );
-app.use(store);
 app.use(router);
 
 const http = axios.create({
@@ -27,5 +26,7 @@ const http = axios.create({
 });
 
 app.config.globalProperties.$http = http;
+store.$http = http;
+app.use(store);
 app.config.globalProperties.gsap = gsap;
 app.mount('#app');
