@@ -1,7 +1,20 @@
 <template>
-  <p>History</p>
+  <Layout v-if='isAuthenticated'>
+    <h2 class='text-3xl'>History</h2>
+  </Layout>
 </template>
 
 <script>
-export default {};
+import Layout from '../components/Layout.vue';
+
+export default {
+  components: {
+    Layout,
+  },
+  computed: {
+    isAuthenticated() {
+      return this.$auth0.isAuthenticated.value;
+    },
+  },
+};
 </script>
