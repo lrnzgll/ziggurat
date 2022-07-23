@@ -18,7 +18,6 @@ export default {
   components: {
     Layout,
   },
-
   data() {
     return {
       token: null,

@@ -47,7 +47,7 @@ export default {
   },
   watch: {
     token() {
-      this.$http.get('/notifications.json')
+      this.$http.get('/notifications')
         .then((response) => {
           this.notifications = response.data.notifications;
         });
