@@ -3,7 +3,7 @@
     <div>
       <h2 class='text-3xl'>Settings</h2>
       <Card title= 'Periodicity'>
-        <p>{{ preferences.periodicity }}</p>
+        {{ periodicity }}
       </Card>
     </div>
   </Layout>
@@ -25,7 +25,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(['preferences']),
+    ...mapState(['periodicity']),
     isAuthenticated() {
       return this.$auth0.isAuthenticated.value;
     },

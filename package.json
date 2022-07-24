@@ -21,9 +21,9 @@
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "crypto-js": "^4.1.1",
-    "gsap": "^3.10.4",
     "postcss": "^8",
     "tailwindcss": "^3",
+    "vee-validate": "^4.6.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"

@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 import { createAuth0 } from '@auth0/auth0-vue';
 import axios from 'axios';
-import { gsap } from 'gsap';
 import './assets/tailwind.css';
 import App from './App.vue';
 import router from './router';
@@ -28,5 +27,4 @@ const http = axios.create({
 app.config.globalProperties.$http = http;
 store.$http = http;
 app.use(store);
-app.config.globalProperties.gsap = gsap;
 app.mount('#app');

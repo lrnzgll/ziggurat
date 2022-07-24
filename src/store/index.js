@@ -5,6 +5,7 @@ export default createStore({
   state: {
     user: null,
     preferences: null,
+    periodicity: '',
     gravatarUrl: null,
 
   },
@@ -19,7 +20,7 @@ export default createStore({
       state.gravatarUrl = `https://www.gravatar.com/avatar/${MD5(user.email).toString()}?d=mp`;
     },
     setPreferences(state, preferences) {
-      state.preferences = preferences;
+      state.periodicity = preferences.periodicity;
     },
   },
   actions: {
