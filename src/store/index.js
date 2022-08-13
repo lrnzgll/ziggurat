@@ -7,7 +7,7 @@ export default createStore({
     preferences: null,
     periodicity: '',
     gravatarUrl: null,
-
+    notifications: null,
   },
   getters: {
     loaded(state) {
@@ -21,6 +21,9 @@ export default createStore({
     },
     setPreferences(state, preferences) {
       state.periodicity = preferences.periodicity;
+    },
+    setNotifications(state, notifications) {
+      state.notifications = notifications;
     },
   },
   actions: {
@@ -43,6 +46,18 @@ export default createStore({
         .get('/users/preferences')
         .then((response) => {
           commit('setPreferences', response.data.preferences);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+    fetchNotifications({ commit }, token) {
+      this.$http.defaults.headers.Authorization = token;
+
+      this.$http
+        .get('/users/notifications')
+        .then((response) => {
+          commit('setNotifications', response.data.notifications);
         })
         .catch((e) => {
           console.log(e);

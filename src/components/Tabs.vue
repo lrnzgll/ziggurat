@@ -1,16 +1,10 @@
 <template>
   <menu class='flex items-center justify-items-center h-10 p-2 justify-center bg-sky-500 rounded-md self-center'>
-    <button @click='settings' class='px-3'>
-      <font-awesome-icon :icon="[settingsIconStyle, 'list-alt']" :style="{ color: 'white' }" size='lg' />
-    </button>
     <button @click='history' class='px-3'>
       <font-awesome-icon :icon="[historyIconStyle, 'clock']" :style="{ color: 'white' }" size='lg' />
     </button>
     <button @click='home' class='px-3'>
       <font-awesome-icon :icon="[houseIconStyle, 'lightbulb']" :style="{ color: 'white' }" size='lg' />
-    </button>
-    <button @click='notifications' class='px-3'>
-      <font-awesome-icon :icon="[notificationsStyle, 'bell']" :style="{ color: 'white' }" size='lg' />
     </button>
     <button @click='account' class='px-3'>
       <font-awesome-icon :icon="[accountIconStyle, 'user']" :style="{ color: 'white' }" size='lg' />
@@ -23,20 +17,16 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faLightbulb as farLightbulb,
   faClock as farClock,
-  faListAlt as farListAlt,
-  faBell as farBell,
   faUser as farUser,
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faLightbulb,
   faClock,
-  faListAlt,
-  faBell,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faLightbulb, faClock, faListAlt, faBell, faUser, farBell, farUser, farLightbulb, farClock, farListAlt);
+library.add(faLightbulb, faClock, faUser, farUser, farLightbulb, farClock);
 
 export default {
   name: 'Tabs',
@@ -44,12 +34,6 @@ export default {
     FontAwesomeIcon,
   },
   computed: {
-    settingsIconStyle() {
-      if (this.$route.name === 'settings') {
-        return 'fas';
-      }
-      return 'far';
-    },
     historyIconStyle() {
       if (this.$route.name === 'history') {
         return 'fas';
@@ -64,12 +48,6 @@ export default {
     },
     houseIconStyle() {
       if (this.$route.name === 'home') {
-        return 'fas';
-      }
-      return 'far';
-    },
-    notificationsStyle() {
-      if (this.$route.name === 'notifications') {
         return 'fas';
       }
       return 'far';
